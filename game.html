@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game</title>
+	<link rel="stylesheet" href="other/gamestyle.css">
+</head>
+<body onload="setTimeout(openD, 3000)">
+	<div class="main">
+		<div class="mainvision">
+			<div class="notes1 items" onclick="Rem_notes1()"></div>
+			<div class="notes2 items" onclick="Rem_notes2()"></div>
+			<div class="notes3 items" onclick="Rem_notes3()"></div>
+			<div class="notes4 items" onclick="Rem_notes4()"></div>
+			<div class="box items" onclick="Rem_box()"></div>
+			<div class="respirator items" onclick="Rem_respirator()"></div>
+			<div class="radio items" onclick="Rem_radio()"></div>
+			<div class="details1 items" onclick="Rem_details1()"></div>
+			<div class="details2 items" onclick="Rem_details2()"></div>
+			<div class="shadow items"></div>
+			<div class="door left"></div>
+			<div class="door right"></div>
+			<div class="water items" onclick="Rem_water()"></div>
+			<div class="ventilation items" onclick="Rem_ventilation()"></div>
+			<div class="screw_jack items" onclick="Rem_screw_jack()"></div>
+			<div class="stone items"></div>
+			<div class="tunnel items" onclick="Rem_tunnel()"></div>
+			<div class="arrow items" onclick="Rem_arrow()"></div>
+			<div class="panel items">
+				<input id='rg1' type="range" min="0" max="12" value="6" oninput="Panel1()"><p class='rgt1'>6</p>
+				<input id='rg2' type="range" min="0" max="12" value="0" oninput="Panel2()"><p class='rgt2'>0</p>
+				<input id='rg3' type="range" min="0" max="12" value="2" oninput="Panel3()"><p class='rgt3'>2</p>
+			</div>
+		</div>
+		<div class="stats">
+			<div class='lift-btn' onclick="lift()">
+				<p>Лифт</p>
+				<label><input type="radio" class='floors' name='floors' value="0">&nbsp;0 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-1">-1 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-2">-2 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-3">-3 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-4">-4 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-5">-5 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-6">-6 этаж</label>
+				<label><input type="radio" class='floors' name='floors' value="-7">-7 этаж</label>
+			</div>
+			<div class="this-floor">
+				<p>Текущий этаж</p>
+				<span>0</span>
+			</div>
+			<div class="metan">
+				<p>Концентрация метана</p>
+				<span id='metan-p'>0.1</span><span id='metan-z'>%</span>
+			</div>
+			<div class="clear"></div>
+			<div class="health">
+				<p>Ваше состояние</p>
+				<span>Норма</span>
+				<span id='hls'></span>
+			</div>
+			<div class="tools">
+				<p>Инвентарь</p>
+				<span>Газоанализатор</span>
+			</div>
+			
+		</div>
+		<div class="clear"></div>
+		<div class="message">
+			<p>Я прибыл на очередную заявку.<br>"В шахте отказали воздушные насосы, высокая концентрация метана".<br>Говорят, рабочие были эвакуированы еще две недели назад, а инженерную компанию вызвали только что. Благо, что все агрегаты расположены рядом с лифтом.<br>Мне нужно лишь найти верный этаж и не надышаться газом.</p>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="other/gamescripts.js"></script>
+</html>
