@@ -31,6 +31,12 @@ p {
 	z-index: 1;
 }
 
+.star {
+	position: relative;
+	left: 15px;
+	top: 10px;
+}
+
 .stats {
 	margin: 20px 20px 0 20px;
 	width: 310px;
